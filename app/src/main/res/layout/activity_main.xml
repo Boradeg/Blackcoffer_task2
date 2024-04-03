@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/toolbar_color"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/left_menu"
+            android:text="Howdy Gokul Borade !!"
+            android:textColor="@color/white"
+
+          />
+        <ImageView
+            android:id="@+id/loc"
+            android:layout_width="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/left_menu"
+
+            android:layout_height="15dp"
+            android:layout_below="@id/heading"
+            android:src="@drawable/location_pin" />
+        <ImageView
+            android:id="@+id/left_menu"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/paragraph" />
+
+
+        <TextView
+            android:id="@+id/heading2"
+            android:layout_below="@id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/loc"
+            android:layout_marginStart="5dp"
+            android:text="Munciple Coleny, Pune"
+            android:textColor="@color/white"
+            />
+
+<ImageView
+    android:layout_width="30dp"
+    android:layout_height="20dp"
+    android:id="@+id/refineImg"
+    android:src="@drawable/settings_sliders"
+    android:layout_alignParentRight="true"
+    />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refine"
+            android:id="@+id/refine_tv"
+            android:textColor="@color/white"
+            android:layout_below="@id/refineImg"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/tab_indicator_selected" />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabLayout" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addEmployeeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/tab_color"
+        android:src="@drawable/plus_icon"
+        app:fabSize="normal"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Round"
+        app:tint="@android:color/white" />
+
+</RelativeLayout>

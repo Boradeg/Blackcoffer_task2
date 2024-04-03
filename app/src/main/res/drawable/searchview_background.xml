@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/searchview_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@android:color/white" /> <!-- Background color -->
+    <stroke
+        android:width="1dp"
+    android:color="@color/toolbar_color" />
+    <corners android:radius="18dp" /> <!-- Border radius -->
+</shape>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/background_rv"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/rel2"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="Gokul Borade"
+                android:textColor="@color/toolbar_color"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginTop="3dp"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/user_location"
+                android:layout_marginTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tab_color"
+                android:layout_below="@+id/profile_name"
+                android:layout_marginStart="40dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Pune | Student"
+                android:textSize="@dimen/_8sdp" />
+
+            <TextView
+                android:id="@+id/user_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_location"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/grey10"
+                android:fontFamily="@font/roboto_regular"
+                android:text="within 100km"
+                android:textSize="@dimen/_8sdp" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/p_bar"
+                android:layout_width="70dp"
+                android:progress="50"
+                android:layout_height="80dp"
+                android:layout_below="@id/user_distance"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="5dp"
+
+
+                />
+
+            <TextView
+                android:id="@+id/tv_prof_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_distance"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/grey10"
+                android:layout_toRightOf="@+id/p_bar"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Profile Score - 26%"
+                android:textSize="@dimen/_8sdp" />
+
+            <TextView
+                android:id="@+id/tv_invite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_distance"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/toolbar_color"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="+ INVITE"
+                android:textSize="@dimen/_10sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_prof_score"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="bottom">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/linLayout"
+
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/img_cup"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/coffee_cup" />
+
+                    <TextView
+                        android:id="@+id/tv_copy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/img_cup"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Coffee | "
+                        android:textSize="@dimen/_10sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_buisness"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toRightOf="@id/tv_copy"
+                        android:src="@drawable/briefcase" />
+
+                    <TextView
+                        android:id="@+id/tv_buisness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@id/img_buisness"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Buisness | "
+                        android:textColor="#631D18"
+                        android:textSize="@dimen/_10sdp"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_freindship"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+
+                        android:layout_toRightOf="@id/tv_buisness"
+                        android:src="@drawable/friends" />
+
+                    <TextView
+                        android:id="@+id/tv_freindship"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/img_freindship"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Friendship"
+                        android:textColor="#7C6214"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_community"
+                    android:textColor="#3d5258"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linLayout"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Hi community! I am open to new connectionm "
+                    android:textSize="@dimen/_10sdp" />
+
+                <ImageView
+                    android:id="@+id/img_smile"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/linLayout"
+                    android:layout_marginStart="1dp"
+                    android:layout_toRightOf="@id/tv_community"
+                    android:src="@drawable/gestures" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_rv_small">
+
+        <TextView
+            android:id="@+id/profile_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="SY"
+            android:visibility="gone"
+            android:textColor="@color/toolbar_color"
+            android:textSize="@dimen/_20sdp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/woman_s"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

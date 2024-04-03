@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-<<<<<<< HEAD
 import android.widget.ImageView
-=======
->>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -43,7 +40,6 @@ class BlankFragment3 : Fragment() {
     private fun getUserProfiles(): List<UserServices> {
         // Sample data
         return listOf(
-<<<<<<< HEAD
             UserServices("Gokul Shinde", "Student", "Pune", "within 100km", 26,R.drawable.store),
             UserServices("Sagar Borade", "Engineer", "Mumbai", "within 100km", 28,R.drawable.store_three),
             UserServices("Rushi Borade", "Intern", "Benglore", "within 100km", 26,R.drawable.store_two),
@@ -57,21 +53,6 @@ class BlankFragment3 : Fragment() {
             UserServices("Gokul Shinde", "Student", "Mumbai", "within 100km", 26,R.drawable.store_three),
             UserServices("Rushi Borade", "Engineer", "Mumbai", "within 100km", 66,R.drawable.store_two),
             UserServices("Sagar Jadhav", "Intern", "Pune", "within 100km", 26,R.drawable.store),
-=======
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserServices("Gokul Borade", "Student", "Pune", "within 100km", 26),
->>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
 
             )
     }
@@ -89,10 +70,7 @@ class UserBuisnessAdapter(private val UserServices: List<UserServices>) :
         private val userDistanceTextView: TextView = itemView.findViewById(R.id.user_distance)
         private val p_bar: ProgressBar = itemView.findViewById(R.id.p_bar)
         private val p_bar_tv: TextView = itemView.findViewById(R.id.tv_prof_score)
-<<<<<<< HEAD
         private val profileImageView: ImageView = itemView.findViewById(R.id.profile_image)
-=======
->>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
 
 
         fun bind(userProfile: UserServices) {
@@ -103,11 +81,8 @@ class UserBuisnessAdapter(private val UserServices: List<UserServices>) :
                 userDistanceTextView.text = userProfile.distance
                 p_bar.progress = userProfile.pBar
                 p_bar_tv.text = "Profile Score - ${userProfile.pBar}"
-<<<<<<< HEAD
                 profileImageView.setImageResource(userProfile.imageResId)
 
-=======
->>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
             }
         }
     }

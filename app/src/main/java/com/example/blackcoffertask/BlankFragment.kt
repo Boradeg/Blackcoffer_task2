@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-<<<<<<< HEAD
 import android.widget.ImageView
-=======
->>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -41,7 +38,6 @@ class BlankFragment : Fragment() {
     private fun getUserProfiles(): List<UserProfile> {
         // Sample data
         return listOf(
-<<<<<<< HEAD
             UserProfile("Gokul Borade", "Student", "Pune", "within 140km", 26, R.drawable.woman_s),
             UserProfile("John Doe", "Enginner", "Mumbai", "within 30km", 90, R.drawable.man2),
             UserProfile("Sagar Shinde", "Doctor", "Nagpur", "within 50km", 80, R.drawable.man_three),
@@ -55,69 +51,34 @@ class BlankFragment : Fragment() {
             UserProfile("Datta Borade", "Intern", "New York", "within 50km", 10, R.drawable.woman_s),
             UserProfile("John Doe", "Professional", "New York", "within 540km", 40, R.drawable.woman_s),
             UserProfile("John Doe", "Student", "New York", "within 50km", 70, R.drawable.man2),
-=======
-            UserProfile("Gokul Borade", "Student", "Pune", "within 100km", 26),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
-            UserProfile("John Doe", "Professional", "New York", "within 50km", 70),
->>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
             // Add more user profiles as needed
         )
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
 }
 data class UserProfile(
     val userName: String,
     val userProfile: String,
     val userLocation: String,
     val distance: String,
-<<<<<<< HEAD
     val pBar: Int,
     val imageResId: Int // Add this field for image resource ID
 )
 
 
 
-=======
-    val pBar: Int
-)
-
-
->>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
 class UserProfileAdapter(private val userProfiles: List<UserProfile>) :
     RecyclerView.Adapter<UserProfileAdapter.UserProfileViewHolder>() {
 
     inner class UserProfileViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-<<<<<<< HEAD
         // Declare variables for Views including ImageView
-=======
-        // Declare variables for TextViews
->>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
         private val profileNameTextView: TextView = itemView.findViewById(R.id.profile_name)
         private val userLocationTextView: TextView = itemView.findViewById(R.id.user_location)
         private val userDistanceTextView: TextView = itemView.findViewById(R.id.user_distance)
         private val p_bar: ProgressBar = itemView.findViewById(R.id.p_bar)
         private val p_bar_tv: TextView = itemView.findViewById(R.id.tv_prof_score)
-<<<<<<< HEAD
         private val profileImageView: ImageView = itemView.findViewById(R.id.profile_image)
-=======
-
->>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
 
         fun bind(userProfile: UserProfile) {
             with(itemView) {
@@ -125,16 +86,11 @@ class UserProfileAdapter(private val userProfiles: List<UserProfile>) :
                 profileNameTextView.text = userProfile.userName
                 userLocationTextView.text = userProfile.userLocation
                 userDistanceTextView.text = userProfile.distance
-<<<<<<< HEAD
                 p_bar.progress = userProfile.pBar
                 p_bar_tv.text = "Profile Score - ${userProfile.pBar}%"
 
                 // Set image
                 profileImageView.setImageResource(userProfile.imageResId)
-=======
-                 p_bar.progress = userProfile.pBar
-                 p_bar_tv.text = "Profile Score - ${userProfile.pBar}"
->>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
             }
         }
     }

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RefineActivity">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/toolbar_color"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="50dp"
+            android:layout_centerVertical="true"
+            android:layout_height="50dp"
+            android:src="@drawable/left"
+            />
+
+        <TextView
+            android:id="@+id/heading2"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Refine"
+            android:textSize="18dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/white"
+            />
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_select_availbility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="20dp"
+        android:text="Select Your Availability"
+        android:textColor="@color/toolbar_color" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/spinner_select_availability_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_select_availbility"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        app:boxStrokeColor="@color/grey10"
+        app:hintTextColor="@color/toolbar_color"
+        tools:ignore="MissingConstraints">
+
+        <AutoCompleteTextView
+            android:id="@+id/roles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:hint="Available | Hey Let Us Connect"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_select_availability_layout"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:text="Add Your Status"
+        android:textColor="@color/toolbar_color" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_skill_layout"
+        style="@style/LoginTextInputOuterFieldStyle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/text_status"
+        android:layout_marginHorizontal="20dp"
+        app:boxStrokeColor="@color/grey10"
+        app:hintTextColor="@color/blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/number"
+            style="@style/LoginTextInputInnerFieldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:drawablePadding="5dp"
+            android:inputType="text"
+            android:text="Hi Community ! I am open to new connections"
+            android:textAlignment="textStart"
+            android:textCursorDrawable="@null" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/text_select_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_skill_layout"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:text="Select Hyper Local Distance"
+        android:textColor="@color/toolbar_color" />
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:max="100"
+        android:layout_marginTop="10dp"
+        android:min="1"
+        android:layout_below="@+id/text_select_distance"
+        />
+    <TextView
+        android:id="@+id/tv_start_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Km"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/seekBar"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 Km"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/seekBar"
+        />
+    <TextView
+        android:id="@+id/text_select_purpose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_start_km"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
+        android:text="Add Your Status"
+        android:textColor="@color/toolbar_color" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/lin"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_select_purpose"
+
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customButton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_bg"
+            android:text="Coffe"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button_bg"
+            android:text="Buisness"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button_bg_white"
+            android:text="Hobbies"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button_bg"
+            android:text="Friendship"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin"
+        android:id="@+id/lin2"
+        android:layout_marginStart="20dp"
+
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/button_bg_white"
+            android:text="Movies"
+            android:textAllCaps="false"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button_bg_white"
+            android:text="Dinning"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button_bg_white"
+            android:text="Dating"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/button_bg_white"
+            android:text="Matrimony"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save_btn"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/button_bg"
+        android:text="Save And Explore"
+        android:textAllCaps="false"
+        android:layout_below="@id/lin2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

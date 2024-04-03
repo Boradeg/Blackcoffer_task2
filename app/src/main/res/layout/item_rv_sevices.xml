@@ -176,8 +176,11 @@
             android:textColor="@color/toolbar_color"
             android:textSize="@dimen/_20sdp" />
         <ImageView
+<<<<<<< HEAD
             android:id="@+id/profile_image"
             android:layout_marginTop="10dp"
+=======
+>>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/woman_s"

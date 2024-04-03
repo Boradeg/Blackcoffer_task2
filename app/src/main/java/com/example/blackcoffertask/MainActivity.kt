@@ -11,7 +11,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
+<<<<<<< HEAD
 import com.google.android.material.bottomnavigation.BottomNavigationView
+=======
+>>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
 import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
@@ -29,8 +32,11 @@ class MainActivity : AppCompatActivity() {
         val refineImg: ImageView = findViewById(R.id.refineImg)
         // Define the adapter that will return a fragment for each of the two tabs
         val adapter = MyPagerAdapter(supportFragmentManager)
+<<<<<<< HEAD
         //tabLayout.setSelectedTabIndicator(R.drawable.tab_indicator_selected)
 
+=======
+>>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
         viewPager.adapter = adapter
         refineBtn.setOnClickListener {
             startActivity(Intent(this,RefineActivity::class.java))
@@ -41,14 +47,21 @@ class MainActivity : AppCompatActivity() {
 
         // Setup the TabLayout with the ViewPager
         tabLayout.setupWithViewPager(viewPager)
+<<<<<<< HEAD
         tabLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+=======
+        tabLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.blue))
+>>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
         tabLayout.setTabTextColors(Color.WHITE, Color.WHITE) // Set both selected and unselected text color to white
 
         // Optionally, you can give titles to your tabs
         tabLayout.getTabAt(0)?.text = "Personal"
         tabLayout.getTabAt(1)?.text = "Service"
         tabLayout.getTabAt(2)?.text = "Buisness"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
     }
 
     // Adapter class to provide the appropriate Fragment for each view pager page
@@ -70,5 +83,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 062d9fdc08fa2eb52e0c8a6d9de178468717a66f
 }
